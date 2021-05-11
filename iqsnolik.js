@@ -90,22 +90,15 @@ function check(table) {
   if (sumDiagonal2 === size || sumDiagonal2 === 0) {
     return `Player${sumDiagonal2 / size} Win by Diagonal2`;
   }
-  //   outer_loop: for (let e = 0; e < size; e++) {
-  //     for (let f = 0; f < size; f++) {
-  //       if (table[e][f] === "-") {
-  //         break outer_loop;
-  //       } else {
-  //         return "DRAW";
-  //       }
-  //     }
-  //   }
-  //return "DRAW";
+  
+  if(gameTable.some(e => e === "")){
+    break;
+  }else{
+    return "DRAW";
+  }
+
 }
 
 player0Input(gameTable);
-player0Input(gameTable);
-player0Input(gameTable);
-player0Input(gameTable);
-player0Input(gameTable);
-player0Input(gameTable);
+
 console.log(gameTable);
